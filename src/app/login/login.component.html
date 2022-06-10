@@ -1,0 +1,35 @@
+<form [formGroup]='Login'>
+    <div class="row">
+        <div class="col-sm-12">
+    <div class="row" style="background-color: white;padding: 10px;">
+        <div class="col-s-12">
+            <h1>Login</h1>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom:10px;">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2"><b>Username</b></div>
+        <div class="col-sm-8">
+            <input type="text" formControlName="UserName"   class="form-control" placeholder="Enter User Name"  />
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row" style="margin-bottom:10px;">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2"><b>Password</b></div>
+        <div class="col-sm-8">
+            <input type="password"    class="form-control" placeholder="Enter Your Password" formControlName="password" />
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row" style="margin-bottom:10px;text-align:center;">
+        <div class="col-sm-12">
+            <input type="button" (click)="UserLogin(Login.value)" id="btnLogin" value="Login"  class="btn btn-primary" />
+            <input type="button" id="btnCancel" value="Cancel" class="btn btn-danger" />
+        </div>
+    </div>
+    
+     </div>
+    
+    </div>
+    </form>

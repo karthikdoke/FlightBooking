@@ -1,0 +1,92 @@
+<form [formGroup]="AddUser">
+    <div class="row">
+    <div class="col-sm-12">
+       
+        <div class="row">
+            <div class="col-sm-6">
+                
+                <img src="assets/Images/flight.jfif" style="width:100%;height:480px;padding:10px" />
+            </div>
+            <div class="col-sm-6">
+                <div class="row" style="background-color:white;padding:10px;">
+                    <div class="col-sm-12">
+                        <h1>Registration form</h1>
+                    </div>
+                </div>
+                
+               
+                <div class="row" style="margin-bottom:10px;">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2"><b>Full Name</b></div>
+                    <div class="col-sm-8">
+                        <input type="text" formControlName="UserName" id="txtUName" name="txtUName" class="form-control" placeholder="Full Name" />
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2"><b> Password</b></div>
+                    <div class="col-sm-8">
+                        <input type="password" formControlName="Password" id="txtPassword" name="txtPassword" class="form-control" placeholder="Enter Password" />
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2"><b> Email</b></div>
+                    <div class="col-sm-8">
+                        <input type="text" formControlName="Email" id="txtEmail" name="txtEmail" class="form-control" placeholder="Enter Email" />
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2"><b> Gender</b></div>
+                    <div class="col-sm-8">
+                        <input type="radio" formControlName="Gender" id="rbtMale"  class="form" value="Male" />Male
+                        <input type="radio" formControlName="Gender" id="rbtFemale" class="form" value="Female" />Female
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2"><b>Phone Number</b></div>
+                    <div class="col-sm-8">
+                        <input type="number" formControlName="PhoneNumber" id="txtPhone" name="txtPhone" class="form-control" placeholder="Phone Number" />
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div><div class="row" style="margin-bottom:10px;">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2"><b>Phone Number</b></div>
+                    <div class="col-sm-8">
+                        <input type="number" formControlName="Age" id="txtage" name="txtage" class="form-control" placeholder="age" />
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div> </div><div class="row" style="margin-bottom:10px;">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2"><b>Phone Number</b></div>
+                    <div class="col-sm-8">
+                        <input type="textArea" formControlName="Addresss" id="txtaddress" name="txtaddress" class="form-control" placeholder="addresss" />
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <div class="col-sm-1"></div>
+                    <div class="row" style="margin-bottom:10px;margin-left: 100px;">
+                        <div class="col-sm-3"></div>
+                            <div class="col-sm-3">
+                                <input type="button" (click)="registerUser(AddUser.value)" id="btnRegister" value="Register" class="btn-success" />
+                                
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="button"(click)="onCancelClick()"  id="btnCancel" value="Cancel" class="btn-danger" />
+                                
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-1"></div>
+                        </div>
+
+                    </div>
+                
+        </div>
+</div>

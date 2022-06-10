@@ -1,0 +1,146 @@
+<form  [formGroup]="AddFlight">
+    <div class="row">
+    
+    <div class="col-sm-6">
+        <div class="row" style="background-color:white;padding:10px;">
+            <div class="col-sm-12">
+                <h1>Schedule Airline</h1>
+            </div>
+        </div>
+       
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b> FlightName</b></div>
+            <div class="col-sm-8">
+                <input type="text" id="flightnumber" formControlName="flightName" name="flightnumber" class="form-control" placeholder="Flight Name" />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b> From Place</b></div>
+            <div class="col-sm-8">
+                <input type="text" id="txtfromplace" formControlName="source" name="txtfromplace" class="form-control" placeholder="From Place" />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b> To Place</b></div>
+            <div class="col-sm-8">
+                <input type="text" id="txttoplace" formControlName="Destination"  name="txttoplace" class="form-control" placeholder="To Place" />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b>Start Date</b></div>
+            <div class="col-sm-8">
+                <input type="datetime-local" id="txtstartdate" class="form-control" formControlName="startDateTime"/>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b>End Date</b></div>
+            <div class="col-sm-8">
+                <input type="datetime-local" id="txtenddate" class="form-control" formControlName="endDateTime"/>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b>Scheduled Days</b></div>
+            <div class="col-sm-8" > 
+                <input formControlName="sheduleDays"/>               
+                <select>
+                <option value = "Monday"> Monday 
+                </option>
+                <option value = "Tuesday"> Tuesday 
+                </option>
+                <option value = "Wednesday"> Wednesday
+                </option>
+                <option value = "Thursday"> Thursday
+                </option>
+                <option value = "Friday"> Friday 
+                </option>
+                <option value = "Saturday"> Saturday
+                </option>
+                <option value = "Sunday"> Sunday
+                </option>
+                </select>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b> Instruments Used</b></div>
+            <div class="col-sm-8">
+                <input type="text" formControlName="instrumentsUsed" id="txtinstrument" name="txtinstrument" class="form-control" placeholder="Enter Instrument Used" />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b> Business class seats</b></div>
+            <div class="col-sm-8">
+                <input type="text" formControlName="totalNoOfBusinessClassSeats" id="txtbcs" name="txtbcs" class="form-control" placeholder="Business class seats" />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b>Non Business class seats</b></div>
+            <div class="col-sm-8">
+                <input type="text" formControlName="totalNoOfNonBusinessClassSeats" id="txtnbcs" name="txtnbcs" class="form-control" placeholder="Non Business class seats" />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b>onewayPrice </b></div>
+            <div class="col-sm-8">
+                <input type="text" formControlName="onewayPrice" id="txttktcost" name="txttktcost" class="form-control" placeholder="Total Ticket Cost" />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b>TwO WAY Cost</b></div>
+            <div class="col-sm-8">
+                <input type="text" formControlName="roundtripPrice" id="txttktcost" name="txttktcost" class="form-control" placeholder="Total Ticket Cost" />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b>Number of Rows</b></div>
+            <div class="col-sm-8">
+                <input type="text" formControlName="noOfRows" id="txtnoofrows" name="txtnoofrows" class="form-control" placeholder="No Of Rows" />
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><b>Meal</b></div>
+            <div class="col-sm-8">
+                <input type="radio"formControlName="mealNonVeg" id="rbtveg" class="form" value="Veg" />Veg
+                <input type="radio" formControlName="mealVeg" id="rbtnonveg"  class="form" value="Nonveg" />NonVeg
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" style="margin-bottom:10px;">
+            <div class="col-sm-1"></div>
+            <div class="row" style="margin-bottom:10px;margin-left: 100px;">
+                <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <input type="button"(click)="AddAiroplane(AddFlight.value)" id="btnschedule" value="Schedule" class="btn-success" />
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="button"(click)=onCancelClick()  id="btnCancel" value="Cancel" class="btn-danger" />
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
